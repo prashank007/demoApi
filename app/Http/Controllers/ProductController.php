@@ -104,7 +104,7 @@ return response([
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->update($request->all());//$PRODUCT OLD DATA //$REQUEST -> OLD DATA
     }
 
     /**
@@ -116,5 +116,8 @@ return response([
     public function destroy(Product $product)
     {
         //
+        $product->delete();
+        return response(null,Response::HTTP_NO_CONTENT);
+
     }
 }
