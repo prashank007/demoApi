@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::ApiResource('/products','ProductController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
