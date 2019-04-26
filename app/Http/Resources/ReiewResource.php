@@ -15,6 +15,7 @@ class ReiewResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id' => $this->id,
             'customer' => $this->customer,
             'body' => $this->review,
             'star' => $this->star,
@@ -22,3 +23,4 @@ class ReiewResource extends JsonResource
         ];
     }
 }
+//1
